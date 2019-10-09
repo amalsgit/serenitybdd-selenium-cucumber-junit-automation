@@ -1,8 +1,6 @@
 package com.hellofresh.challenge.stepdefinitions;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import com.hellofresh.challenge.account.AccountQuestions;
+import com.hellofresh.challenge.account.AccountPageQuestions;
 import com.hellofresh.challenge.navigationbar.NavigationBarQuestions;
 import com.hellofresh.challenge.navingation.NavigateActions;
 import com.hellofresh.challenge.signin.SignInPageActions;
@@ -20,7 +18,7 @@ public class UserLoginSteps {
   SignInPageActions signIn;
 
   @Steps
-  AccountQuestions accountQuestions;
+  AccountPageQuestions accountPageQuestions;
 
   @Steps
   NavigationBarQuestions navigationBarQuestions;
@@ -36,11 +34,10 @@ public class UserLoginSteps {
     signIn.loginAsExistingUser();
   }
 
-  @Then("(Joe should be able to )view his account page")
-  public void user_should_be_able_to_view_the_account_page() {
-    String userName = "Joe Black";
-    accountQuestions.verifyUserInAccountPage();
-    assertThat(navigationBarQuestions.getCurrentUserName().equalsIgnoreCase(userName)).isTrue();
+  @Then("^(.*) should be able to view his account page$")
+  public void user_should_be_able_to_view_the_account_page(String user) {
+    accountPageQuestions.verifyUserInAccountPage();
+    navigationBarQuestions.verifyLoggedInUser(user);
   }
 
   @Then("view the sign out option")

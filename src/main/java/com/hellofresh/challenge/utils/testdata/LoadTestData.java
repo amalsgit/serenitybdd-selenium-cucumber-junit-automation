@@ -1,4 +1,4 @@
-package com.hellofresh.challenge.utils;
+package com.hellofresh.challenge.utils.testdata;
 
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -9,6 +9,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Load test data from yaml file
+ */
 public class LoadTestData {
 
   public static TestDataDTO testData = new TestDataDTO();

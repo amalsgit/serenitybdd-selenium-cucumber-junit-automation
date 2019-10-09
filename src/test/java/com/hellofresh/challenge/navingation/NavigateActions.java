@@ -1,32 +1,22 @@
 package com.hellofresh.challenge.navingation;
 
 import com.hellofresh.challenge.homepage.HomePage;
-import com.hellofresh.challenge.homepage.HomePageActions;
 import com.hellofresh.challenge.homepage.HomePageQuestions;
 import com.hellofresh.challenge.navigationbar.NavigationBarActions;
 import com.hellofresh.challenge.signin.SignInPage;
-import com.hellofresh.challenge.signin.SignInPageActions;
 import com.hellofresh.challenge.signin.SignInPageQuestions;
 import net.serenitybdd.core.steps.UIInteractionSteps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 
-public class NavigateActions extends UIInteractionSteps{
+public class NavigateActions extends UIInteractionSteps {
 
 
   HomePage homePage;
-
-  @Steps
-  HomePageActions homePageActions;
+  SignInPage signInPage;
 
   @Steps
   HomePageQuestions homePageQuestions;
-
-  @Steps
-  SignInPageActions signInPageActons;
-
-
-  SignInPage signInPage;
 
   @Steps
   SignInPageQuestions signInPageQuestions;
@@ -34,19 +24,19 @@ public class NavigateActions extends UIInteractionSteps{
   @Steps
   NavigationBarActions navigationBarActions;
 
-  @Step
+  @Step("Navigate to home page")
   public void theHomePage() {
     homePage.open();
     homePageQuestions.verifyUserInHomePage();
   }
 
-  @Step
+  @Step("Navigate to Log in page")
   public void theLoginPage() {
     navigationBarActions.goToSignInPage();
     signInPageQuestions.verifyUserInSignInPage();
   }
 
-  @Step
+  @Step("Navigate to sign in page")
   public void theSignInPage() {
     signInPage.open();
     signInPageQuestions.verifyUserInSignInPage();

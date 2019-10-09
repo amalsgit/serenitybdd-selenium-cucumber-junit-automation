@@ -2,14 +2,14 @@ package com.hellofresh.challenge.account;
 
 import com.github.javafaker.Faker;
 import net.serenitybdd.core.steps.UIInteractionSteps;
+import net.thucydides.core.annotations.Step;
 
 public class AccountPageActions extends UIInteractionSteps {
 
-  AccountPage accountPage;
-
+  @Step("Proceed to create account after providing email id")
   public void createAccount() {
     Faker faker= new Faker();
-    $(accountPage.EMAIL_FIELD).sendKeys(faker.internet().emailAddress());
-    $(accountPage.CREATE_ACC_BUTTON).click();
+    $(AccountPage.EMAIL_FIELD).sendKeys(faker.internet().emailAddress());
+    $(AccountPage.CREATE_ACC_BUTTON).click();
   }
 }

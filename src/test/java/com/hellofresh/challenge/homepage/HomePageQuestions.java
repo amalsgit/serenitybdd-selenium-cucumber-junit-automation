@@ -1,15 +1,11 @@
 package com.hellofresh.challenge.homepage;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import net.serenitybdd.core.steps.UIInteractionSteps;
-import net.thucydides.core.annotations.Steps;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePageQuestions extends UIInteractionSteps {
 
-  HomePage homePage;
-
   public void verifyUserInHomePage() {
-    assertThat(homePage.getTitle()).isEqualToIgnoringCase("My Store");
+    waitForCondition().until(ExpectedConditions.titleIs("My Store"));
   }
 }

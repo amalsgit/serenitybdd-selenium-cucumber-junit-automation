@@ -1,15 +1,20 @@
 package com.hellofresh.challenge.stepdefinitions;
 
+import static com.hellofresh.challenge.utils.customerdata.CustomDataGenerator.customerDataDTO;
+
 import com.hellofresh.challenge.account.AccountPageActions;
+import com.hellofresh.challenge.account.AccountPageQuestions;
 import com.hellofresh.challenge.createaccount.CreateAccountPageActions;
 import com.hellofresh.challenge.createaccount.CreateAccountPageQuestions;
+import com.hellofresh.challenge.navigationbar.NavigationBarQuestions;
 import com.hellofresh.challenge.navingation.NavigateActions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Steps;
 
-public class UserSignUpSteps{
+public class UserSignUpSteps {
 
   @Steps
   NavigateActions navigateTo;
@@ -23,7 +28,11 @@ public class UserSignUpSteps{
   @Steps
   CreateAccountPageActions createAccountPageActions;
 
-  UserLoginSteps userLoginSteps;
+  @Steps
+  AccountPageQuestions accountPageQuestions;
+
+  @Steps
+  NavigationBarQuestions navigationBarQuestions;
 
   @Given("Matt, a new customer navigates to application sign in page")
   public void customer_navigates_to_application_sign_in_page() {
@@ -35,11 +44,18 @@ public class UserSignUpSteps{
     accountPageActions.createAccount();
     createAccountPageQuestions.verifyUserInCreateAccountPage();
     createAccountPageActions.createAccount();
-
   }
 
   @Then("Matt should get logged into the application")
   public void user_should_get_logged_into_the_application() {
+    accountPageQuestions.verifyUserInAccountPage();
+    String userName = customerDataDTO.getFirstName() + " " + customerDataDTO.getLastName();
+    navigationBarQuestions.verifyLoggedInUser(userName);
+  }
 
+  @Given("Customer data is available for new user")
+  public void create_customer_data() {
+    Serenity.recordReportData().withTitle("Generated customer Data")
+        .andContents(customerDataDTO.toString());
   }
 }
