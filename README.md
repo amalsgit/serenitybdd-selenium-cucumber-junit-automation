@@ -40,7 +40,7 @@ Please run the below command from root directory to open the result after execut
 ```bash
 open target/site/serenity/index.html 
 ```
-A sample completed test report is attached in the ```sample-result``` directory
+A sample completed test report is attached in the ```serenity-results/index.html``` directory
 ![Sample Result](https://user-images.githubusercontent.com/22020329/66681565-9aea4180-ec90-11e9-8a35-72b3f1a0b992.png)
 
 Additional command line parameters can be passed for switching the application environment
