@@ -1,7 +1,5 @@
 package com.hellofresh.challenge.cartpayment;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import net.serenitybdd.core.steps.UIInteractionSteps;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,8 +23,11 @@ public class CartPaymentPageQuestions extends UIInteractionSteps {
   }
 
   public void verifyUserInOrderConfirmationPage() {
-    assertThat(
-        getDriver().getCurrentUrl().contains("?controller=order-confirmation"))
-        .isTrue();
+    waitForCondition().until(ExpectedConditions.urlContains("controller=order-confirmation"));
+  }
+
+  public void verifyUserNotInPaymentOption() {
+    waitForCondition().until(
+        ExpectedConditions.invisibilityOfElementLocated(CartPaymentPage.PAY_BY_WIRE_LINK));
   }
 }

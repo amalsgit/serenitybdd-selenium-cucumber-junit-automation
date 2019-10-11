@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Checkout item from cart","User should be able to checkout, pay and complete an order","SUCCESS","2019-10-12T01:21:48.413+05:30[Asia/Kolkata]","0.0","43.8"
+"Existing user login","User should be able to login to the application","SUCCESS","2019-10-12T01:22:32.444+05:30[Asia/Kolkata]","0.0","19.91"
+"New user sign up","User should be able to create a new account for the application","SUCCESS","2019-10-12T01:22:52.571+05:30[Asia/Kolkata]","0.0","18.53"
