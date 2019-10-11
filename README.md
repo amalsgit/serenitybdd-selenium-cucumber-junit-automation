@@ -51,9 +51,9 @@ To enable screenshots for each step the following command line parameter can be 
 $ mvn clean verify -Dserenity.take.screenshots=FOR_EACH_ACTION
 ```  
 ## Container based Zalenium grid parallel run
-Parallel runs have been implemented with docker container using the Zalenium (https://opensource.zalando.com/zalenium/#try-it) which provides video recording,live preview and a dashboard for monitoring the tests
+Parallel runs have been implemented with docker container using the Zalenium (https://opensource.zalando.com/zalenium/#try-it) which provides video recording,live preview and a dashboard for monitoring the tests.
 
- Screenshot 2019-10-11 at 11.16.47 PM.png
+![Zalenium Dashboard](https://user-images.githubusercontent.com/22020329/66681390-4646c680-ec90-11e9-9dd9-8263a0621868.png)
  
  Your machine needs docker to be installed to run the tests with Zalenium. Once docker is installed. Please follow the below steps.
  
