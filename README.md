@@ -1,7 +1,6 @@
-##Serenity-Selenium-Java Sample Test Automation Solution
+# Serenity-Selenium-Java Sample Test Automation Solution
 
 - Serenity BDD is a library that makes it easier to write high quality automated acceptance tests, with powerful reporting and living documentation features. It has strong support for both web testing with Selenium, and API testing using RestAssured. 
-
 - Lean Page Objects and Action & Question Classes approach are used in this solution to make the tests very readable and easily maintainable.
 - Tests are written in BDD Gherkin format and it is represented as a living documentation in the test report 
 
@@ -62,7 +61,6 @@ Parallel runs have been implemented with docker container using the Zalenium (ht
  
  ``` docker pull dosel/zalenium```
  - Run it 
- 
  ```json
 docker run --rm -ti --name zalenium -p 4444:4444 \
        -e PULL_SELENIUM_IMAGE=true \
@@ -103,7 +101,6 @@ drivers {
   }
 }
 ```
-
 ### Environment-specific configurations
 Application's invidual environments are configured here, so that the tests can be run in different environments. 
 Individual page path is also externalised for easier management of direct page navigations
@@ -126,5 +123,3 @@ environments {
     signin.page = "#{webdriver.base.url}/index.php?controller=authentication&back=my-account"
   }
 }
-
- 
