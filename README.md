@@ -2,7 +2,7 @@
 
 - Serenity BDD is a library that makes it easier to write high quality automated acceptance tests, with powerful reporting and living documentation features. It has strong support for both web testing with Selenium, and API testing using RestAssured. 
 - Design patterns like Lean Page Objects, Action & Question Classes approach are used in this solution to make the tests very readable and easily maintainable.
-- Tests are written in BDD Gherkin format and it is represented as a living documentation in the test report 
+- Tests are written in BDD Gherkin format and it is represented as a living documentation in the test report. 
 
 ### The project directory structure
 
@@ -16,9 +16,9 @@ src
           AccountPageActions        Action class containing only user actions on the page
           AccountPageQuestions      Question class containing only verifications & validations
     + resources
-      + features                    Feature files
-        + checkout                  Feature file subdirectories  (Epics in test report)
-          checkout_item.feature     Fetures containing BDD scenarios (Features in test report)
+      + features                    Feature files directory
+        + checkout                  Feature file subdirectories (Epics in test report)
+          checkout_item.feature     Features containing BDD scenarios (Features in test report)
       + testdata                    Test data files 
       + webdriver                   Bundled webdriver binaries
         + linux
@@ -26,6 +26,7 @@ src
         + windows
           chromedriver.exe          OS-specific Webdriver binaries
           geckodriver.exe
+      Serenity.conf                 Configurations file
 
 ```
 ## Executing the tests
@@ -47,7 +48,7 @@ Additional command line parameters can be passed for switching the application e
 ```json
 $ mvn clean verify -Denvironment="prod"
 ```
-To enable screenshots for each step the following command line parameter can be passed. Screenshots are by default enabled only for test failures to improve execution speed
+To enable screenshots for each step during the tests, the following command line parameter can be passed. Screenshots are by default enabled only for test failures to improve execution speed
 ```json
 $ mvn clean verify -Dserenity.take.screenshots=FOR_EACH_ACTION
 ```  
@@ -59,7 +60,6 @@ Parallel runs have been implemented with docker container using the Zalenium (ht
  Your machine needs docker to be installed to run the tests with Zalenium. Once docker is installed. Please follow the below steps.
  
  - Pull Zelenium from dockerhub 
- 
  ``` docker pull dosel/zalenium```
  - Run it 
  ```json
@@ -69,7 +69,7 @@ docker run --rm -ti --name zalenium -p 4444:4444 \
        -v /tmp/videos:/home/seluser/videos \
        --privileged dosel/zalenium start
 ```
- - Once the Zalenium grid is up and running run the test 
+ - Once the Zalenium grid is up and running, run the test 
  ```
 mvn verify -Dwebdriver.driver=remote -Dwebdriver.remote.url=http://localhost:4444/wd/hub
  ```    
@@ -124,3 +124,8 @@ environments {
     signin.page = "#{webdriver.base.url}/index.php?controller=authentication&back=my-account"
   }
 }
+
+### Other Libraries 
+- Java Faker - This library is used in the tests to generate random data to be passed to the application like user details
+- Jackson - To read test data from yaml file and load it to DTO class
+- Lombok - To reduce boilerplate code in DTO classes and increase readabilty
