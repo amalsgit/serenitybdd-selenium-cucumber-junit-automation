@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Checkout item from cart" skipped="0" tests="1" time="43.8" timestamp="2019-10-12 01:21:48"><testcase name="User should be able to checkout, pay and complete an order"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Checkout item from cart" skipped="0" tests="1" time="39.87" timestamp="2019-10-12 10:47:22"><testcase name="User should be able to checkout, pay and complete an order"/></testsuite>

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccountPageActions extends UIInteractionSteps {
 
-  @Step
+  @Step("Fill user details and create account")
   public void createAccount() {
 
     $(CreateAccountPage.TITLE_FEMALE).click();

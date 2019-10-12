@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartShippingPageActions extends UIInteractionSteps {
 
-  @Step
+  @Step("Confirm terms of service")
   public void confirmTerms() {
     waitForCondition().until(
         ExpectedConditions.visibilityOfElementLocated(CartShippingPage.TERMS_CHECKBOX))
