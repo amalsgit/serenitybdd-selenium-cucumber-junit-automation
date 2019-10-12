@@ -9,6 +9,8 @@
 ```Gherkin
 src
   + main
+    +java
+      + utils                       Utililty classes to read test data and generate DTO's
   + test
     + java                          Test runners and supporting code
       + account                     Domain model directory
