@@ -58,7 +58,7 @@ A sample completed test report is attached in the ```serenity-results/index.html
 
 Additional command line parameters can be passed for switching the application environment
 ```json
-$ mvn clean verify -Denvironment="prod"
+$ mvn clean verify -Denvironment=prod
 ```
 To enable screenshots for each step during the tests, the following command line parameter can be passed. Screenshots are by default enabled only for test failures to improve execution speed
 ```json
