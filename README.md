@@ -62,7 +62,9 @@ Parallel runs have been implemented with docker container using the Zalenium (ht
  Your machine needs docker to be installed to run the tests with Zalenium. Once docker is installed. Please follow the below steps.
  
  - Pull Zelenium from dockerhub 
- ``` docker pull dosel/zalenium```
+ ``` 
+ docker pull dosel/zalenium
+ ```
  - Run it 
  ```json
 docker run --rm -ti --name zalenium -p 4444:4444 \
