@@ -124,7 +124,7 @@ environments {
     signin.page = "#{webdriver.base.url}/index.php?controller=authentication&back=my-account"
   }
 }
-
+````
 ### Other Libraries 
 - Java Faker - This library is used in the tests to generate random data to be passed to the application like user details
 - Jackson - To read test data from yaml file and load it to DTO class
