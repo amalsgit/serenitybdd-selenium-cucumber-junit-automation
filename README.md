@@ -105,7 +105,7 @@ drivers {
 ### Environment-specific configurations
 Application's invidual environments are configured here, so that the tests can be run in different environments. 
 Individual page path is also externalised for easier management of direct page navigations
-```json
+```
 environments {
   default {
     webdriver.base.url = "http://automationpractice.com/"
