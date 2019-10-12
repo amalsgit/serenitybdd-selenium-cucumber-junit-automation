@@ -77,6 +77,10 @@ mvn verify -Dwebdriver.driver=remote -Dwebdriver.remote.url=http://localhost:444
  ```    
  - Go to http://localhost:4444/grid/admin/live to see live stream of the tests running in chrome and firefox
  - Go to the Zalenium dashboard http://localhost:4444/dashboard/ to view the test video, logs and results
+ - To stop the grid 
+ ```
+ docker stop zalenium
+ ```
  
 ## Other Configurations configuration
 
