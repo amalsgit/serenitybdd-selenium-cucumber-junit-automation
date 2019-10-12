@@ -34,6 +34,8 @@ src
 ## Executing the tests
 Run `mvn clean verify` from the command line.
 
+All tests will by default run in parallel mode with each feature running in seperate browsers.
+
 By default, the tests will run using Chrome. You can run them in Firefox by overriding the `driver` system property, e.g.
 ```json
 $  mvn verify -Dwebdriver.driver=firefox
@@ -56,6 +58,9 @@ $ mvn clean verify -Dserenity.take.screenshots=FOR_EACH_ACTION
 ```  
 ## Container based Zalenium grid parallel run
 Parallel runs have been implemented with docker container using the Zalenium (https://opensource.zalando.com/zalenium/#try-it) which provides video recording,live preview and a dashboard for monitoring the tests.
+
+This setup can be used when running tests in a CI system for distributed execution or even in local machine for painless execution without worrying about the latest browser drivers.
+The container will take care of pulling the latest drivers for both selenium and firefox for test execution.
 
 ![Zalenium Dashboard](https://user-images.githubusercontent.com/22020329/66681390-4646c680-ec90-11e9-9dd9-8263a0621868.png)
  
