@@ -36,6 +36,14 @@ Run `mvn clean verify` from the command line.
 
 All tests will by default run in parallel mode with each feature running in seperate browsers.
 
+Note: 
+For Mac users: Latest versions of chromedriver and geckodriver are included in the package and your system will need chrome version 78 or firefox version 69.03 to run the tests.
+
+For Windows users: Latest versions of chromedriver and geckodriver are included in the package and your system will need chrome version 77 or firefox version 69.03 to run the tests.
+
+For Linux users: This solution is not tested in Linux. Please update the driver/your browser if you end up having issues while executing the test. You can also run the tests in Zalenium docker grid which will handle all these dependencies automatically inside the docker container.
+
+
 By default, the tests will run using Chrome. You can run them in Firefox by overriding the `driver` system property, e.g.
 ```json
 $  mvn verify -Dwebdriver.driver=firefox
