@@ -48,7 +48,6 @@ public class ProductCheckoutSteps {
 
   @Then("Joe should be taken to order confirmation page")
   public void user_should_be_taken_to_order_confirmation_page() {
-    cartPaymentPageQuestions.verifyUserNotInPaymentOption();
     cartPaymentPageQuestions.verifyUserInOrderConfirmationPage();
   }
 

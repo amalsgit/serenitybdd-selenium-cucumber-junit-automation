@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Checkout item from cart","User should be able to checkout, pay and complete an order","SUCCESS","2019-10-12T10:47:22.502+05:30[Asia/Kolkata]","0.0","39.87"
-"Existing user login","User should be able to login to the application","SUCCESS","2019-10-12T10:48:02.582+05:30[Asia/Kolkata]","0.0","18.44"
-"New user sign up","User should be able to create a new account for the application","SUCCESS","2019-10-12T10:48:21.268+05:30[Asia/Kolkata]","0.0","17.82"
+"Checkout item from cart","User should be able to checkout, pay and complete an order","SUCCESS","2019-10-12T12:24:36.084+05:30[Asia/Kolkata]","0.0","44.93"
+"Existing user login","User should be able to login to the application","SUCCESS","2019-10-12T12:24:36.084+05:30[Asia/Kolkata]","0.0","22.78"
+"New user sign up","User should be able to create a new account for the application","SUCCESS","2019-10-12T12:24:36.084+05:30[Asia/Kolkata]","0.0","26.83"

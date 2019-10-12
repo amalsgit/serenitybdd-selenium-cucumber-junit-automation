@@ -164,18 +164,8 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.1</version>
                 <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/Test*.java</include>
-                        <include>**/*TestSuite.java</include>
-                        <include>**/When*.java</include>
-                    </includes>
-                    <systemPropertyVariables>
-                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                    </systemPropertyVariables>
                     <parallel>classes</parallel>
-                    <threadCount>2</threadCount>
-                    <forkCount>2</forkCount>
+                    <threadCount>${parallel.tests}</threadCount>
                 </configuration>
                 <executions>
                     <execution>
@@ -227,7 +217,6 @@
                             <!-- Mandatory -->
                             <!-- List of package names to scan for glue code. -->
                             <glue>
-                                <package>planner.cucumber</package>
                                 <package>com.hellofresh.challenge.stepdefinitions</package>
                             </glue>
                             <parallelScheme>FEATURE</parallelScheme>
