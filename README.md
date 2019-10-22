@@ -1,8 +1,9 @@
-# Serenity-Selenium-Java Sample Test Automation Solution
+# Serenity-Selenium-Cucumber-Junit-Maven-Java Sample Test Automation Solution
 
 - Serenity BDD is a library that makes it easier to write high quality automated acceptance tests, with powerful reporting and living documentation features. It has strong support for both web testing with Selenium, and API testing using RestAssured. 
 - Design patterns like Lean Page Objects, Action & Question Classes approach are used in this solution to make the tests very readable and easily maintainable.
 - Tests are written in BDD Gherkin format and it is represented as a living documentation in the test report. 
+- Application under test: http://automationpractice.com/
 
 ### The project directory structure
 
