@@ -1,4 +1,3 @@
-@run
 Feature: New user sign up
   As a new customer of the shopping website
   I should be able to sign up with my email id

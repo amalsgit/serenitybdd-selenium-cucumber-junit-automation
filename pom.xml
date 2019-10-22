@@ -217,7 +217,7 @@
                             <!-- Mandatory -->
                             <!-- List of package names to scan for glue code. -->
                             <glue>
-                                <package>com.hellofresh.challenge.stepdefinitions</package>
+                                <package>com.serenityui.challenge.stepdefinitions</package>
                             </glue>
                             <parallelScheme>FEATURE</parallelScheme>
                             <customVmTemplate>src/test/resources/cucumber-serenity-runner.vm</customVmTemplate>
